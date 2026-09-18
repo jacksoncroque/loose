@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
+    "lucide-react": "^1.47.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "sass-embedded": "^1.104.1"
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
