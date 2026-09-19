@@ -1,0 +1,48 @@
+.container {
+   position: relative;
+
+   & > img {
+      position: absolute;
+      transform: rotate(-55deg);
+
+      top: 0rem;
+      left: -26rem;
+
+      opacity: 70%;
+   }
+
+   &Wrapper {
+    position: relative;
+
+      padding: 4rem 5rem 4rem 10rem;
+
+      & > h1 {
+         color: #5b2a86;
+         font-size: 2.5rem;
+      }
+      &Collection {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         gap: 1rem;
+
+         &Item {
+            & > img {
+               max-height: 23.75rem;
+               height: 100%;
+               width: auto;
+               object-fit: cover;
+            }
+         }
+      }
+
+      &Smile {
+        position: absolute;
+        
+        right: 0rem;
+        top: 26rem;
+        height: 7rem;
+
+
+      }
+   }
+}
