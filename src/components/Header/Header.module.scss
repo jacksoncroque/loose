@@ -25,6 +25,10 @@
             transform: translateY(-10%);
          }
       }
+
+      @media (max-width: $tablet) {
+         display: none;
+      }
    }
 
    &Wrapper {
@@ -35,11 +39,33 @@
       width: 100%;
       padding: 1rem 5rem;
 
+      @media (max-width: $tablet) {
+         padding: 1rem;
+
+         &Logo {
+            display: flex;
+            align-self: center;
+            margin-right: auto;
+         }
+      }
+
+      @media (max-width: $laptop) {
+         padding: 2rem;
+      }
+
       &Chips {
          display: flex;
          gap: 2rem;
          font-weight: bold;
          font-size: 0.8rem;
+
+         @media (max-width: $tablet) {
+            display: none;
+         }
+
+         @media (max-width: $laptop) {
+            gap: 1rem;
+         }
       }
 
       &Search {
@@ -50,6 +76,12 @@
 
          background-color: #f5f5f5;
          border-radius: 9999px;
+
+         cursor: pointer;
+
+         @media (max-width: $tablet) {
+            display: none;
+         }
 
          & > span {
             display: block;
@@ -63,6 +95,8 @@
          & > input {
             padding: 0.25rem 0 0.25rem 2.5rem;
 
+            cursor: pointer;
+
             &::placeholder {
                font-size: 0.8rem;
                font-weight: 600;
@@ -74,9 +108,34 @@
 
       &Actions {
          display: flex;
-
          align-items: center;
          gap: 1rem;
+
+         &Icons {
+            display: flex;
+            gap: 1rem;
+
+            & > :not(:last-child) {
+               transition: all ease-in-out 0.3s;
+               cursor: pointer;
+
+               &:hover {
+                  transform: translateY(-10%);
+               }
+            }
+
+            @media (max-width: $tablet) {
+               & > :first-child {
+                  display: none;
+               }
+            }
+         }
+
+         @media (min-width: $laptop) {
+            & > :last-child {
+               display: none;
+            }
+         }
       }
    }
 }

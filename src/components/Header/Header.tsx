@@ -1,7 +1,9 @@
-import { Handbag, Heart, Search, ShoppingCart } from 'lucide-react';
+import { Handbag, Heart, Search } from 'lucide-react';
+
 import logo from '../../assets/logo/loose..svg';
 
 import Button from '../Button';
+import MobileMenu from './MobileMenu/MobileMenu';
 
 import styles from './Header.module.scss';
 
@@ -34,6 +36,7 @@ const Header = () => {
                <span>
                   <Search size={16} />
                </span>
+
                <input
                   type="text"
                   placeholder="Buscar"
@@ -41,8 +44,12 @@ const Header = () => {
             </div>
 
             <div className={styles.containerWrapperActions}>
-               <Heart size={18} />
-               <Handbag size={18} />
+               <div className={styles.containerWrapperActionsIcons}>
+               <Heart size={20} />
+               <Handbag size={20} />
+            </div>
+
+            <MobileMenu />
             </div>
          </div>
       </div>

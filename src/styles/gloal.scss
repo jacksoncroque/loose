@@ -4,3 +4,8 @@
 html {
     font-family: var(--font-grotesk);
 }
+
+html,
+body {
+  overflow-x: hidden;
+}
