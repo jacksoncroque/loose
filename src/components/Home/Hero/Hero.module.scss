@@ -1,0 +1,22 @@
+@use '_mixins' as *;
+
+.container {
+   width: 100%;
+   margin: 0 auto;
+
+   &Wrapper {
+    width: 100%;
+
+      & > img {
+         width: 100%;
+         position: relative;
+         filter: sepia(15%) saturate(140%) contrast(100%);
+
+         @media (max-width: $mobile) {
+            object-fit: cover;
+            object-position: center;
+            height: calc(100dvh - var(--navbar-height));
+         }
+      }
+   }
+}

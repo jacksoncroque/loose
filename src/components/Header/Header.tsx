@@ -1,6 +1,6 @@
 import { Handbag, Heart, Search } from 'lucide-react';
 
-import logo from '../../assets/logo/loose..svg';
+import logo from '@/assets/logo/loose..svg';
 
 import Button from '../Button';
 import MobileMenu from './MobileMenu/MobileMenu';
