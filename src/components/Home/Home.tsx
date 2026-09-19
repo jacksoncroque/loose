@@ -1,5 +1,6 @@
 import BrandStatment from './BrandStatment';
 import Collections from './Colections';
+import FeatureVideo from './FeatureVideo';
 import Hero from './Hero';
 
 import styles from './Home.module.scss';
@@ -10,6 +11,7 @@ const Home = () => {
          <Hero />
          <BrandStatment />
          <Collections />
+         <FeatureVideo />
       </div>
    );
 };
