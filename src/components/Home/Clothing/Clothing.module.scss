@@ -1,0 +1,163 @@
+.container {
+   margin: 0 auto;
+   height: 100dvh;
+
+   &Wrapper {
+      display: flex;
+      height: 100%;
+
+      &Yellow {
+         position: relative;
+
+         display: flex;
+         flex: 1;
+         flex-direction: column;
+         justify-content: center;
+
+         padding: 4rem;
+
+         background-color: #ffd60a;
+
+         overflow: hidden;
+
+         // desenho decorativo
+         &::before {
+            content: '';
+
+            position: absolute;
+            inset: 0;
+
+            transform: rotate(-90deg);
+
+            background-color: #cca32c;
+
+            mask: url('../../../assets/mockups/concept_1.png') center / contain no-repeat;
+
+            -webkit-mask: url('../../../assets/mockups/concept_1.png') center / contain no-repeat;
+
+            z-index: 0;
+         }
+
+         // linha superior
+         & > span:first-of-type {
+            display: block;
+
+            width: 20rem;
+            height: 2px;
+
+            background-color: #000;
+
+            position: relative;
+            z-index: 1;
+         }
+
+         // textos
+         & > h1 {
+            position: relative;
+            z-index: 1;
+
+            margin: 0;
+
+            font-weight: bold;
+            font-size: 7rem;
+            line-height: 0.9;
+
+            color: #000000e3;
+         }
+         & > h1:last-of-type {
+            position: relative;
+            z-index: 1;
+
+            margin: 0;
+
+            font-weight: 500;
+            font-size: 7rem;
+            line-height: 0.9;
+         }
+
+         // linha inferior
+         & > span:last-of-type {
+            display: block;
+
+            width: 100%;
+            height: 2px;
+
+            margin-top: 1rem;
+
+            background-color: #000;
+
+            position: relative;
+            z-index: 1;
+         }
+      }
+
+      &Image {
+         display: flex;
+         flex: 1.2;
+
+         position: relative;
+
+         & > img:first-of-type {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+         }
+      }
+   }
+}
+
+// enfeites
+.skater {
+   width: 7rem;
+   position: absolute;
+
+   z-index: 2;
+
+   bottom: 31rem;
+   right: 25rem;
+}
+
+.skaterLaydown {
+   width: 14rem;
+   position: absolute;
+
+   transform: rotate(-30deg);
+
+   z-index: 2;
+
+   bottom: -2rem;
+   right: 8rem;
+}
+
+.stamp {
+   width: 9rem;
+   position: absolute;
+
+   z-index: 2;
+
+   bottom: 32rem;
+   right: 2rem;
+}
+
+.stampImage {
+   width: 9rem;
+   position: absolute;
+
+   z-index: 2;
+
+   bottom: 32rem;
+   right: 2rem;
+}
+.skaterPurple {
+   width: 6rem;
+   position: absolute;
+
+   z-index: 2;
+
+   top: 25rem;
+   right: 32rem;
+}

@@ -1,4 +1,5 @@
 import BrandStatment from './BrandStatment';
+import Clothing from './Clothing';
 import Collections from './Collections';
 import FeatureVideo from './FeatureVideo';
 import Hero from './Hero';
@@ -14,6 +15,7 @@ const Home = () => {
          <Collections />
          <FeatureVideo />
          <Shoes />
+         <Clothing />
       </div>
    );
 };
