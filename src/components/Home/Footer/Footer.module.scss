@@ -1,0 +1,43 @@
+.container {
+   background-color: #ffd60a;
+
+   &Wrapper {
+      padding: 5rem 5rem 2rem 5rem;
+      display: flex;
+      flex-direction: column;
+
+      &Hero {
+         display: flex;
+         gap: 2rem;
+
+         &Orders {
+            & img {
+               width: 9rem;
+            }
+         }
+
+         &Brand {
+            & > p:first-of-type {
+               font-weight: bold;
+               font-size: 1.25rem;
+               margin-bottom: 0.5rem;
+            }
+         }
+
+         &Contact {
+            display: flex;
+            margin-left: auto;
+            gap: 1rem;
+            justify-self: flex-end;
+
+            
+         }
+      }
+
+      &Footer {
+         display: flex;
+         justify-self: baseline;
+         margin: 5rem 0 0 2rem;
+      }
+   }
+}

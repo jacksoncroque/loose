@@ -3,6 +3,7 @@ import BrandStatment from './BrandStatment';
 import Clothing from './Clothing';
 import Collections from './Collections';
 import FeatureVideo from './FeatureVideo';
+import Footer from './Footer';
 import Hero from './Hero';
 
 import styles from './Home.module.scss';
@@ -20,6 +21,7 @@ const Home = () => {
          <Clothing />
          <Products />
          <About />
+         <Footer />
       </main>
    );
 };
