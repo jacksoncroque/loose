@@ -1,6 +1,8 @@
 @use '_mixins' as *;
 
 .container {
+   height: 100dvh;
+   margin-top: auto;
 
    &Wrapper {
       display: flex;

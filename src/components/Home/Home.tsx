@@ -9,14 +9,14 @@ import Shoes from './Shoes';
 
 const Home = () => {
    return (
-      <div className={styles.container}>
+      <main className={styles.container}>
          <Hero />
          <BrandStatment />
          <Collections />
          <FeatureVideo />
          <Shoes />
          <Clothing />
-      </div>
+      </main>
    );
 };
 
