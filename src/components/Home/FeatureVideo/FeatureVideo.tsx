@@ -1,9 +1,13 @@
 import { Play } from 'lucide-react';
+
+import background from '@/assets/images/background_high.png'
+
 import styles from './FeatureVideo.module.scss';
 
 const FeatureVideo = () => {
    return (
       <div className={styles.container}>
+         <img src={background} alt="" />
          <div className={styles.containerWrapper}>
             <div className={styles.containerWrapperHigh}>
                <h1>alto.</h1>

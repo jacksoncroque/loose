@@ -1,9 +1,10 @@
 import BrandStatment from './BrandStatment';
-import Collections from './Colections';
+import Collections from './Collections';
 import FeatureVideo from './FeatureVideo';
 import Hero from './Hero';
 
 import styles from './Home.module.scss';
+import Shoes from './Shoes';
 
 const Home = () => {
    return (
@@ -12,6 +13,7 @@ const Home = () => {
          <BrandStatment />
          <Collections />
          <FeatureVideo />
+         <Shoes />
       </div>
    );
 };
