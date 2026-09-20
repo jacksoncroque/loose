@@ -1,3 +1,4 @@
+import About from './About';
 import BrandStatment from './BrandStatment';
 import Clothing from './Clothing';
 import Collections from './Collections';
@@ -18,6 +19,7 @@ const Home = () => {
          <Shoes />
          <Clothing />
          <Products />
+         <About />
       </main>
    );
 };
