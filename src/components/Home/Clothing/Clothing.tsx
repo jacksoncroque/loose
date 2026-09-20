@@ -1,8 +1,5 @@
-import clothing from '@/assets/mockups/clothing.png';
-import skater from '@/assets/mockups/skater_clothing.png';
-import skaterLaydown from '@/assets/mockups/skater_clothing_laydown.png';
-import shoes from '@/assets/mockups/shoes.png';
-import skaterPurple from '@/assets/mockups/skater_purple.png';
+import bgYellow from '@/assets/mockups/bgYellow.png';
+import campaignClothing from '@/assets/mockups/campaignClothing.png';
 
 import styles from './Clothing.module.scss';
 
@@ -12,50 +9,12 @@ const Clothing = () => {
          <div className={styles.containerWrapper}>
             <div className={styles.containerWrapperYellow}>
                <img
-                  src={skater}
-                  alt="mascote"
-                  className={styles.skater}
+                  src={bgYellow}
+                  alt="a roupa veste você. não o contrário"
                />
-               <img
-                  src={skaterLaydown}
-                  alt="mascote"
-                  className={styles.skaterLaydown}
-               />
-               <img
-                  src={shoes}
-                  alt="mascote"
-                  className={styles.stamp}
-               />
-
-               <span></span>
-
-               <h1>a roupa veste você.</h1>
-               <h1>
-                  não o<br></br>contrário
-               </h1>
-
-               <span></span>
             </div>
             <div className={styles.containerWrapperImage}>
-               <img
-                  src={clothing}
-                  alt="clothing"
-               />
-
-               <img
-                  src={shoes}
-                  alt="mascote"
-                  className={styles.stampImage}
-               />
-
-               <img
-                  src={skaterPurple}
-                  alt="mascote"
-                  className={styles.skaterPurple}
-               />
-
-               <h2>wear it loose</h2>
-               <h2>live it loud</h2>
+               <img src={campaignClothing} alt="wear it loose. live it loud" />
             </div>
          </div>
       </div>

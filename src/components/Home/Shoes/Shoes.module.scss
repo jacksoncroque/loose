@@ -46,7 +46,7 @@
       &Image {
          position: relative;
 
-         & > img:nth-of-type(1) {
+         & > img {
             width: 76rem;
             height: 600px;
 
@@ -56,28 +56,6 @@
             object-fit: cover;
          }
 
-         & > img:nth-of-type(2) {
-            height: 5rem;
-            opacity: 70%;
-            position: relative;
-
-            top: -21rem;
-            left: 62rem;
-            transform: rotate(-55deg);
-         }
-
-         & > p:nth-of-type(1) {
-            position: absolute;
-
-            top: 21rem;
-            right: 66rem;
-
-            color: #fff;
-            font-family: var(--font--space);
-
-            font-weight: 300;
-            font-size: 1.25rem;
-         }
          & > p:nth-of-type(2) {
             position: absolute;
 
@@ -96,7 +74,6 @@
          display: flex;
          flex-direction: column;
          align-items: center;
-         margin-top: -5rem;
 
          & > h1 {
             color: #5b2a86;

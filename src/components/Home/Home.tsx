@@ -5,6 +5,7 @@ import FeatureVideo from './FeatureVideo';
 import Hero from './Hero';
 
 import styles from './Home.module.scss';
+import Products from './Products';
 import Shoes from './Shoes';
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
          <FeatureVideo />
          <Shoes />
          <Clothing />
+         <Products />
       </main>
    );
 };
