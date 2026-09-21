@@ -1,10 +1,11 @@
 import conceptArt from '@/assets/mockups/concept_1.png';
-import star from '@/assets/mockups/star.png';
 import mascot from '@/assets/mockups/mascot.png';
 import skater from '@/assets/mockups/skater.png';
+import star from '@/assets/mockups/star.png';
+
+import Button from '@/components/Button';
 
 import styles from './BrandStatment.module.scss';
-import Button from '@/components/Button';
 
 const BrandStatment = () => {
    return (

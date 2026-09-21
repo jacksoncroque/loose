@@ -1,5 +1,5 @@
-import bgYellow from '@/assets/mockups/bgYellow.png';
 import campaignClothing from '@/assets/mockups/campaignClothing.png';
+import bgYellow from '@/assets/mockups/bgYellow.png';
 
 import styles from './Clothing.module.scss';
 
@@ -14,7 +14,10 @@ const Clothing = () => {
                />
             </div>
             <div className={styles.containerWrapperImage}>
-               <img src={campaignClothing} alt="wear it loose. live it loud" />
+               <img
+                  src={campaignClothing}
+                  alt="wear it loose. live it loud"
+               />
             </div>
          </div>
       </div>

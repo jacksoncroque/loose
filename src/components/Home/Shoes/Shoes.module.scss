@@ -1,10 +1,13 @@
+@use '_mixins' as *;
+
 .container {
    position: relative;
 
    width: 100%;
-   height: 880px;
 
    margin: 0 auto;
+   padding: 2rem;
+
    background-color: #cfbcd6;
 
    & > img {
@@ -27,12 +30,16 @@
       &Title {
          display: flex;
          justify-content: space-between;
+         align-items: center;
+
          padding: 0 5rem;
 
          & > h1 {
+            margin: 0;
+
             color: #5b2a86;
-            font-size: 5rem;
             font-family: var(--font-space);
+            font-size: 5rem;
          }
 
          & > img {
@@ -44,29 +51,14 @@
       }
 
       &Image {
-         position: relative;
+         display: flex;
+         justify-content: center;
 
          & > img {
-            width: 76rem;
-            height: 600px;
+            width: min(100%, 76rem);
+            height: auto;
 
-            margin: 0 auto;
             opacity: 1;
-
-            object-fit: cover;
-         }
-
-         & > p:nth-of-type(2) {
-            position: absolute;
-
-            top: 30rem;
-            right: 67rem;
-
-            color: #fff;
-            font-family: var(--font-space);
-
-            font-weight: bold;
-            font-size: 1.5rem;
          }
       }
 
@@ -75,22 +67,93 @@
          flex-direction: column;
          align-items: center;
 
+         text-align: center;
+
          & > h1 {
+            margin: 0;
+
             color: #5b2a86;
-            font-size: 3rem;
             font-family: var(--font-space);
+            font-size: 3rem;
          }
 
          & > p {
+            margin: 0.75rem 0;
+
             font-family: var(--font-space);
             font-size: 1.25rem;
             font-weight: 300;
          }
 
          &Button {
-            background-color: #ff6b6b;
             max-width: fit-content;
+
+            background-color: #ff6b6b;
             color: #fff;
+         }
+      }
+   }
+}
+
+@media (max-width: $desktop) {
+   .container {
+      height: fit-content;
+   }
+}
+
+@media (max-width: $tablet) {
+   .container {
+      height: fit-content;
+
+      &Wrapper {
+         padding: 1rem;
+      }
+   }
+}
+
+@media (max-width: $mobile) {
+   .container {
+      height: fit-content;
+
+      &Wrapper {
+         padding: 0 0.75rem;
+
+         &Title {
+            padding: 0 0.5rem;
+
+            & > h1 {
+               font-size: 3rem;
+            }
+
+            & > img {
+               height: 2.5rem;
+            }
+         }
+
+         &Image {
+            & > img {
+               width: 100%;
+            }
+         }
+
+         &Footer {
+            padding: 1rem 0 2rem;
+
+            & > h1 {
+               max-width: 22rem;
+
+               font-size: 2rem;
+               line-height: 1.05;
+               text-align: center;
+            }
+
+            & > p {
+               max-width: 20rem;
+
+               font-size: 0.9rem;
+               line-height: 1.2;
+               text-align: center;
+            }
          }
       }
    }

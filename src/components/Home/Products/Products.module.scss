@@ -1,3 +1,5 @@
+@use '_mixins' as *;
+
 .container {
    position: relative;
 
@@ -37,17 +39,22 @@
       margin-bottom: 5rem;
 
       &Products {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
          & > img {
             display: block;
 
             width: 100%;
             max-width: 20rem;
             height: auto;
-
-            filter: contrast(110%) saturate(110%);
          }
 
          &Infos {
+            width: 100%;
+            max-width: 20rem;
+
             margin-top: 2rem;
 
             & > h5 {
@@ -120,7 +127,7 @@
       & > input {
          position: absolute;
          top: 5rem;
-         right: 19.5rem;
+         right: 16.5rem;
 
          background-color: #fff;
 
@@ -149,6 +156,166 @@
          color: #fff;
 
          border-radius: 10px;
+      }
+   }
+}
+
+@media (max-width: $desktop) {
+   .container {
+      padding: 4rem 3rem;
+      gap: 4rem;
+
+      &Wrapper {
+         grid-template-columns: repeat(3, 1fr);
+         gap: 3rem;
+
+         &Products {
+            & > img {
+               max-width: 18rem;
+            }
+
+            &Infos {
+               max-width: 18rem;
+
+               &Footer {
+                  gap: 1rem;
+               }
+            }
+         }
+      }
+
+      &Footer {
+         & > img {
+            max-width: 60rem;
+         }
+      }
+
+      &Newsletter {
+         & > input {
+            right: 6rem;
+            top: 4rem;
+         }
+
+         &Button {
+            right: 7.5rem;
+            top: 4.5rem;
+         }
+      }
+   }
+}
+
+@media (max-width: $tablet) {
+   .container {
+      padding: 3rem 2rem;
+      gap: 3rem;
+
+      &Wrapper {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 3rem;
+         margin-bottom: 3rem;
+
+         &Products {
+            & > img {
+               max-width: 18rem;
+            }
+
+            &Infos {
+               max-width: 18rem;
+
+               &Footer {
+                  margin-top: 1.5rem;
+               }
+            }
+         }
+      }
+
+      &Footer {
+         & > img {
+            max-width: 100%;
+         }
+      }
+
+      &Newsletter {
+         & > input {
+            top: 50%;
+            right: 26%;
+            transform: translate(50%, -50%);
+
+            min-width: 16rem;
+
+            &::placeholder {
+               padding: 1rem;
+            }
+         }
+
+         &Button {
+            top: 37%;
+            right: 15%;
+            transform: translateX(50%);
+         }
+      }
+   }
+}
+
+@media (max-width: $mobile) {
+   .container {
+      padding: 2.5rem 1rem;
+      gap: 2.5rem;
+
+      &Wrapper {
+         grid-template-columns: 1fr;
+         gap: 3rem;
+         margin-bottom: 1rem;
+
+         &Products {
+            align-items: center;
+
+            & > img {
+               max-width: 16rem;
+            }
+
+            &Infos {
+               max-width: 16rem;
+
+               & > h4 {
+                  font-size: 1.1rem;
+               }
+
+               & > p {
+                  font-size: 0.85rem;
+               }
+
+               &Footer {
+                  align-items: center;
+                  margin-top: 1rem;
+               }
+            }
+         }
+      }
+
+      &Footer {
+         & > img {
+            width: 100%;
+         }
+      }
+
+      &Newsletter {
+         & > input {
+            top: 45%;
+            right: 50%;
+
+            width: calc(100% - 2rem);
+            min-width: 0;
+
+            transform: translate(50%, -50%);
+         }
+
+         &Button {
+            top: calc(45% + 2.2rem);
+            right: 50%;
+
+            transform: translateX(50%);
+         }
       }
    }
 }

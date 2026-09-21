@@ -1,27 +1,21 @@
 import background from '@/assets/images/background_menu.png';
-import star from '@/assets/mockups/star.png';
+
+import Button from '@/components/Button';
 
 import styles from './Hero.module.scss';
-import Button from '@/components/Button';
 
 const Hero = () => {
    return (
       <section className={styles.container}>
          <img
             src={background}
-            alt=""
+            alt="pessoa de skate"
             aria-hidden="true"
          />
 
          <div className={styles.containerWrapper}>
             <div className={styles.containerWrapperNews}>
                <div className={styles.containerWrapperNewsHeader}>
-                  <img
-                     src={star}
-                     alt=""
-                     aria-hidden="true"
-                  />
-
                   <Button
                      label="DROP 04"
                      customStyle={styles.containerWrapperNewsHeaderButton}
@@ -32,15 +26,17 @@ const Hero = () => {
 
                   <p>“a coleção que veste a hora de ouro”</p>
 
-                  <span></span>
+                  <span />
                </div>
 
                <div className={styles.containerWrapperNewsDescription}>
                   <h2>12 peças. tudo limitado.</h2>
 
-                  <p>friozinho de junho. desenhada com referências do skate</p>
-                  <p>cores quentes, tecidos pesados, peças que aguentam o</p>
-                  <p>paulistano e da estação da luz num sábado de tarde.</p>
+                  <p>
+                     friozinho de junho. desenhada com referências do skate, cores quentes, tecidos
+                     pesados, peças que aguentam o paulistano e da estação da luz num sábado de
+                     tarde.
+                  </p>
 
                   <Button
                      label="quero."
@@ -52,7 +48,7 @@ const Hero = () => {
             <footer className={styles.containerWrapperFooter}>
                <div className={styles.containerWrapperFooterInfos}>
                   <h2>
-                     moda séria <br /> é chata.
+                     moda séria <br />é chata.
                   </h2>
 
                   <h2>chegou drop novo. corre.</h2>

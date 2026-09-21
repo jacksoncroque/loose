@@ -1,5 +1,5 @@
-import model from '@/assets/mockups/skater_boy.jpg';
 import character from '@/assets/mockups/skaterSitDown.png';
+import model from '@/assets/mockups/skater_boy.jpg';
 
 import styles from './About.module.scss';
 

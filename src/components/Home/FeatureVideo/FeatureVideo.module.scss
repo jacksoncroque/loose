@@ -1,89 +1,10 @@
 .container {
-   position: relative;
+  width: 100%;
+  height: auto;
 
-   width: 100%;
-   height: 800px;
-
-   overflow: hidden;
-
-   > img {
-      position: absolute;
-      inset: 0;
-
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-   }
-
-   &Wrapper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-
-      &High {
-         position: relative;
-         width: 100%;
-         height: 100%;
-
-         & > h1 {
-            position: absolute;
-            top: 15rem;
-            right: -39rem;
-            transform: translate(-50%, -50%);
-
-            margin: 0;
-
-            font-family: var(--font-space);
-            font-size: 40rem;
-            font-weight: bold;
-            line-height: 1;
-
-            color: rgba(255, 255, 255, 0.164);
-
-            pointer-events: none;
-         }
-
-         & > span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            width: 5.62rem;
-            height: 5.62rem;
-
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.397);
-
-            cursor: pointer;
-
-            & > svg {
-               width: 32px;
-               height: 32px;
-               fill: white;
-               color: white;
-            }
-         }
-      }
-
-      &Description {
-         position: absolute;
-         left: 40px;
-         bottom: 25px;
-
-         & > p {
-            margin: 0;
-
-            color: white;
-            font-size: 2.5rem;
-            font-weight: 700;
-            line-height: 0.9;
-         }
-      }
-   }
+  & > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }

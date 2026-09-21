@@ -1,24 +1,14 @@
-import { Play } from 'lucide-react';
-
-import background from '@/assets/images/background_high.png'
+import background from '@/assets/images/background_high.png';
 
 import styles from './FeatureVideo.module.scss';
 
 const FeatureVideo = () => {
    return (
       <div className={styles.container}>
-         <img src={background} alt="" />
-         <div className={styles.containerWrapper}>
-            <div className={styles.containerWrapperHigh}>
-               <h1>alto.</h1>
-               <span><Play /></span>
-            </div>
-            <div className={styles.containerWrapperDescription}>
-               <p>
-                  no <br></br>volume <br></br>na <br></br> cor. <br></br> na presença
-               </p>
-            </div>
-         </div>
+         <img
+            src={background}
+            alt=""
+         />
       </div>
    );
 };

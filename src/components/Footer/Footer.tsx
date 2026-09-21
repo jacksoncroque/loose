@@ -1,10 +1,11 @@
-import { FaTwitter } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa6';
 import { TfiYoutube } from 'react-icons/tfi';
 import { FiInstagram } from 'react-icons/fi';
-import styles from './Footer.module.scss';
+import { FaTwitter } from 'react-icons/fa';
 
 import character from '@/assets/mockups/mascot.png';
+
+import styles from './Footer.module.scss';
 
 const Footer = () => {
    return (

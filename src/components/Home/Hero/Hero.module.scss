@@ -1,20 +1,25 @@
+@use '_mixins' as *;
+
 .container {
    position: relative;
-   min-height: 100dvh;
+
+   width: 100%;
+   height: calc(100dvh - var(--navbar-height));
+   margin-top: var(--navbar-height);
+
    overflow: hidden;
-   isolation: isolate;
 
    & > img {
       position: absolute;
       inset: 0;
-      z-index: -1;
 
       width: 100%;
       height: 100%;
+
       object-fit: cover;
       object-position: center;
 
-      filter: sepia(15%) saturate(140%) contrast(110%);
+      z-index: 0;
    }
 
    &Wrapper {
@@ -24,43 +29,24 @@
       display: flex;
       flex-direction: column;
 
-      min-height: 100dvh;
-      padding: 5.5rem 1rem 1.25rem;
+      width: 100%;
+      height: 100%;
+
+      padding: 5.5rem 1rem 1rem;
 
       &News {
          display: flex;
          flex-direction: column;
          align-items: flex-end;
 
-         gap: 12rem;
+         gap: clamp(5rem, 12vh, 12rem);
 
          &Header {
-            position: relative;
-            isolation: isolate;
-
             width: min(25rem, 100%);
-
-            & > img {
-               position: absolute;
-               z-index: 0;
-
-               top: 0.2rem;
-               right: 14.5rem;
-
-               width: 9rem;
-               height: auto;
-
-               object-fit: contain;
-            }
-
-            // tudo fica acima da estrela
-            *:not(img) {
-               position: relative;
-               z-index: 1;
-            }
 
             & > h1 {
                margin: 0;
+
                font-family: var(--font-space);
                font-size: clamp(2.35rem, 4vw, 3.5rem);
                font-weight: 700;
@@ -79,6 +65,7 @@
 
             & > p {
                margin: 1rem 0 0;
+
                font-size: clamp(0.9rem, 1.2vw, 1.1rem);
                font-style: italic;
                font-weight: 600;
@@ -86,8 +73,10 @@
 
             & > span {
                display: block;
-               height: 2px;
+
                width: 10rem;
+               height: 2px;
+
                background-color: #ffd60a;
             }
 
@@ -99,29 +88,31 @@
 
          &Description {
             width: min(23rem, 100%);
-            color: #111;
             margin-right: 2rem;
 
+            color: #111;
+
             & > h2,
-            p {
+            & > p {
                margin: 0;
                font-family: var(--font-space);
             }
 
             & > h2 {
-               font-size: 1.2rem;
+               font-size: clamp(1rem, 1.4vw, 1.2rem);
                font-weight: 700;
                line-height: 1.1;
             }
 
             & > p {
-               font-size: 0.84rem;
+               font-size: clamp(0.75rem, 1vw, 0.84rem);
                line-height: 1.15;
             }
 
             &Button {
-               margin-top: 0.65rem;
                max-width: fit-content;
+               margin-top: 0.65rem;
+
                background-color: #ff6b6b;
                color: #fff;
             }
@@ -130,16 +121,17 @@
 
       &Footer {
          margin-top: auto;
-         padding-top: 2rem;
 
          &Infos {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
             align-items: end;
+
             gap: 1rem;
 
             & > h2 {
                margin: 0;
+
                font-family: var(--font-space);
                font-size: clamp(0.85rem, 1.4vw, 1.35rem);
                font-weight: 300;
@@ -148,12 +140,16 @@
 
             & > h2:nth-of-type(2) {
                justify-self: center;
+
                font-weight: 700;
                color: #5b2a86;
             }
 
             & > h2:nth-of-type(3) {
                justify-self: end;
+
+               margin-bottom: 1rem;
+
                font-size: clamp(0.65rem, 0.9vw, 0.85rem);
             }
          }
@@ -161,33 +157,61 @@
    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $tablet) {
    .container {
+      margin-top: 80px;
+
       &Wrapper {
-         padding: 2rem 1rem 1rem;
-      }
+         padding: 3rem 1rem 1rem;
 
-      &WrapperNews {
-         gap: 5rem;
-      }
+         &News {
+            align-items: center;
+            gap: clamp(4rem, 10vh, 7rem);
 
-      &WrapperNewsHeader {
-         width: 100%;
+            &Header {
+               width: min(25rem, 100%);
 
-         > img {
-            top: 2rem;
-            right: 35%;
-            width: 7rem;
+               & > h1 {
+                  font-size: clamp(2.2rem, 7vw, 3rem);
+               }
+
+               & > p {
+                  font-size: clamp(0.85rem, 2vw, 1rem);
+               }
+            }
+
+            &Description {
+               width: min(25rem, 100%);
+               margin-right: 0;
+
+               & > h2 {
+                  font-size: clamp(1rem, 3vw, 1.2rem);
+               }
+
+               & > p {
+                  font-size: clamp(0.75rem, 2vw, 0.84rem);
+               }
+            }
          }
-      }
 
-      &WrapperFooterInfos {
-         grid-template-columns: 1fr;
-         gap: 0.75rem;
+         &Footer {
+            &Infos {
+               grid-template-columns: 1fr 1fr;
+               gap: 1rem;
 
-         h2:nth-of-type(2),
-         h2:nth-of-type(3) {
-            justify-self: start;
+               & > h2:nth-of-type(1) {
+                  display: none;
+               }
+
+               & > h2:nth-of-type(2) {
+                  justify-self: start;
+               }
+
+               & > h2:nth-of-type(3) {
+                  justify-self: end;
+                  margin-bottom: 0;
+               }
+            }
          }
       }
    }

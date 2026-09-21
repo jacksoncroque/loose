@@ -2,14 +2,14 @@ import { Handbag, Heart, Search } from 'lucide-react';
 
 import logo from '@/assets/logo/loose..svg';
 
-import Button from '../Button';
 import MobileMenu from './MobileMenu/MobileMenu';
+import Button from '../Button';
 
 import styles from './Header.module.scss';
 
 const Header = () => {
    return (
-      <div className={styles.container}>
+      <nav className={styles.container}>
          <div className={styles.containerHeader}>
             <span>| ajuda</span>
             <span>| Junte-se a nós</span>
@@ -45,14 +45,14 @@ const Header = () => {
 
             <div className={styles.containerWrapperActions}>
                <div className={styles.containerWrapperActionsIcons}>
-               <Heart size={20} />
-               <Handbag size={20} />
-            </div>
+                  <Heart size={20} />
+                  <Handbag size={20} />
+               </div>
 
-            <MobileMenu />
+               <MobileMenu />
             </div>
          </div>
-      </div>
+      </nav>
    );
 };
 

@@ -1,0 +1,185 @@
+@use '_mixins' as *;
+
+.container {
+   background-color: #ffd60a;
+
+   &Wrapper {
+      padding: 5rem 5rem 2rem 5rem;
+      display: flex;
+      flex-direction: column;
+
+      &Hero {
+         display: flex;
+         gap: 2rem;
+
+         &Orders,
+         &About {
+            & > ul {
+               & > li {
+                  cursor: pointer;
+               }
+            }
+         }
+
+         &Orders {
+            & img {
+               width: 9rem;
+            }
+         }
+
+         &Brand {
+            & > p:first-of-type {
+               font-weight: bold;
+               font-size: 1.25rem;
+               margin-bottom: 0.5rem;
+            }
+         }
+
+         &Contact {
+            display: flex;
+            margin-left: auto;
+            gap: 1rem;
+            justify-self: flex-end;
+
+            & > span {
+               cursor: pointer;
+            }
+         }
+      }
+
+      &Footer {
+         display: flex;
+         justify-self: baseline;
+         margin: 5rem 0 0 2rem;
+      }
+   }
+}
+
+@media (max-width: $desktop) {
+   .container {
+      &Wrapper {
+         padding: 4rem 3rem 2rem;
+
+         &Hero {
+            gap: 1.5rem;
+
+            &Orders {
+               & img {
+                  width: 7rem;
+               }
+            }
+
+            &Brand {
+               & > p:first-of-type {
+                  font-size: 1.1rem;
+               }
+            }
+
+            &Contact {
+               gap: 0.75rem;
+            }
+         }
+
+         &Footer {
+            margin-top: 4rem;
+         }
+      }
+   }
+}
+
+@media (max-width: $tablet) {
+   .container {
+      &Wrapper {
+         display: grid;
+
+         &Hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+
+            &About {
+               & > ul {
+                  padding: 0;
+               }
+            }
+
+            &Orders {
+               & > ul {
+                  padding: 0;
+               }
+               & img {
+                  width: 6rem;
+               }
+            }
+
+            &Brand {
+               & > p {
+                  font-size: 0.9rem;
+               }
+
+               & > p:first-of-type {
+                  font-size: 1rem;
+               }
+            }
+
+            &Contact {
+               margin-left: 0;
+               justify-self: start;
+            }
+         }
+
+         &Footer {
+            margin: 3rem 0 0;
+         }
+      }
+   }
+}
+
+@media (max-width: $mobile) {
+   .container {
+      &Wrapper {
+         padding: 2.5rem 1rem 1.5rem;
+
+         &Hero {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+
+            &About,
+            &Orders,
+            &Brand {
+               width: 100%;
+            }
+
+            &Orders {
+               & img {
+                  width: 5rem;
+               }
+            }
+
+            &Brand {
+               & > p {
+                  font-size: 0.85rem;
+               }
+
+               & > p:first-of-type {
+                  font-size: 1rem;
+               }
+            }
+
+            &Contact {
+               gap: 0.75rem;
+
+               svg {
+                  width: 24px;
+                  height: 24px;
+               }
+            }
+         }
+
+         &Footer {
+            margin: 2.5rem 0 0;
+            font-size: 0.75rem;
+         }
+      }
+   }
+}

@@ -1,8 +1,8 @@
-import bag from '@/assets/collections/bag.png';
 import fullbody from '@/assets/collections/fullbody.png';
 import glasses from '@/assets/collections/glasses.png';
 import tshirt from '@/assets/collections/tshirt.png';
 import concept from '@/assets/mockups/concept_1.png';
+import bag from '@/assets/collections/bag.png';
 import smile from '@/assets/mockups/smile.png';
 
 import styles from './Collections.module.scss';
