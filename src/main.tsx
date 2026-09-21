@@ -4,9 +4,12 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 
 import './styles/global.scss';
+import { GlobalProvider } from './context/GlobalContext.tsx';
 
 createRoot(document.getElementById('root')!).render(
    <StrictMode>
-      <App />
+      <GlobalProvider>
+         <App />
+      </GlobalProvider>
    </StrictMode>,
 );

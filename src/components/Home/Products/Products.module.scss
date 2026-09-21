@@ -300,21 +300,35 @@
       }
 
       &Newsletter {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         & > img {
+            display: block;
+            width: 100%;
+            height: 7rem;
+            object-fit: cover;
+            object-position: 0% 50%;
+         }
+
          & > input {
-            top: 45%;
-            right: 50%;
+            width: 100%;
 
-            width: calc(100% - 2rem);
-            min-width: 0;
+            position: static;
+            transform: none;
 
-            transform: translate(50%, -50%);
+            margin-top: 1rem;
          }
 
          &Button {
-            top: calc(45% + 2.2rem);
-            right: 50%;
+            display: flex;
+            justify-self: center;
 
-            transform: translateX(50%);
+            position: static;
+            transform: none;
+
+            margin-top: 1rem;
          }
       }
    }
