@@ -58,8 +58,8 @@ const GlobalProvider: React.FC<GlobalProviderProps> = ({ children }) => {
       <GlobalContext.Provider value={values}>
          {children}
          <ToastContainer
-            position="top-center"
-            autoClose={1000}
+            position="bottom-right"
+            autoClose={2000}
             hideProgressBar={false}
             newestOnTop={false}
             closeOnClick={true}

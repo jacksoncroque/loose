@@ -123,7 +123,7 @@
             display: flex;
             gap: 1rem;
 
-            & > :not(:last-child) {
+            & > svg {
                transition: all ease-in-out 0.3s;
                cursor: pointer;
 
@@ -144,6 +144,10 @@
                display: none;
             }
          }
+      }
+
+      &Logo {
+         cursor: pointer;
       }
    }
 }

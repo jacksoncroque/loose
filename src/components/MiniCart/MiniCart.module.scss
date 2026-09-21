@@ -1,0 +1,114 @@
+@use '_mixins' as *;
+
+.container {
+   margin: var(--navbar-height) auto 0 auto;
+   height: 100dvh;
+
+   background-color: #ededed;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   padding: 3rem 1rem;
+
+   &Wrapper {
+      width: 100%;
+      max-width: 1200px;
+
+      display: flex;
+
+      gap: 1rem;
+
+      &Empty {
+         display: flex;
+         flex: 2;
+
+         align-items: center;
+         padding: 1rem;
+         gap: 2rem;
+
+         background-color: #fff;
+         border-radius: 10px;
+      }
+
+      &Filled {
+         display: flex;
+         flex-direction: column;
+         flex: 2;
+
+         padding: 1rem;
+         gap: 1rem;
+
+         background-color: #fff;
+         border-radius: 10px;
+
+         &Prod {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+         }
+
+         &Product {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            & > img {
+               width: 100px;
+               height: 100px;
+
+               object-fit: contain;
+            }
+
+            &Info {
+               display: flex;
+               flex-direction: column;
+               gap: 0.5rem;
+
+               & > p {
+                  margin: 0;
+               }
+
+               &Price {
+                  & > p {
+                     margin: 0;
+                  }
+               }
+
+               &Quantity {
+                  display: flex;
+                  align-items: center;
+                  gap: 0.5rem;
+               }
+            }
+         }
+      }
+
+      &Resume {
+         display: flex;
+         flex-direction: column;
+         flex: 1;
+
+         padding: 1rem;
+         gap: 2rem;
+
+         background-color: #fff;
+         border-radius: 10px;
+
+         &Order {
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #00000041;
+         }
+      }
+   }
+}
+
+@media (max-width: $tablet) {
+   .container {
+      &Wrapper {
+         flex-direction: column;
+      }
+   }
+   
+}

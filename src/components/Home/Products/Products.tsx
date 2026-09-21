@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import background from '@/assets/images/background_products.png';
 import image from '@/assets/mockups/background_products.png';
 import bgNewsletter from '@/assets/mockups/bgNewsletter.png';
@@ -6,8 +8,25 @@ import { data } from './data/data';
 
 import styles from './Products.module.scss';
 import Button from '@/components/Button';
+import { useGlobalContext } from '@/context/GlobalContext';
 
 const Products = () => {
+   const { showSucessMessage } = useGlobalContext();
+
+   const [input, setInput] = useState<string>('');
+
+   const handleChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const input = event.target.value;
+
+      setInput(input);
+   };
+
+   const handleSubmit = () => {
+      setInput('');
+
+      showSucessMessage('Tá dentro. 👊');
+   };
+
    return (
       <div className={styles.container}>
          <img
@@ -59,10 +78,13 @@ const Products = () => {
             <input
                type="email"
                placeholder="SEU EMAIL"
+               value={input}
+               onChange={handleChangeInput}
             />
             <Button
                label="enviar."
                customStyle={styles.containerNewsletterButton}
+               onClick={handleSubmit}
             />
          </div>
       </div>

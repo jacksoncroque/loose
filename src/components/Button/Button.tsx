@@ -2,11 +2,11 @@ import cn from 'classnames';
 
 import styles from './Button.module.scss';
 
-const Button = ({ customStyle = '', label = '', ...props }) => {
+const Button = ({ customStyle = '', label = '', onClick = () => {} }) => {
    return (
       <button
          className={cn(styles.container, customStyle)}
-         {...props}
+         onClick={onClick}
       >
          {label}
       </button>

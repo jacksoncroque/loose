@@ -1,5 +1,7 @@
 import { Handbag, Heart, Search } from 'lucide-react';
 
+import { useNavigate } from 'react-router';
+
 import logo from '@/assets/logo/loose..svg';
 
 import MobileMenu from './MobileMenu/MobileMenu';
@@ -8,6 +10,8 @@ import Button from '../Button';
 import styles from './Header.module.scss';
 
 const Header = () => {
+   const navigate = useNavigate();
+
    return (
       <nav className={styles.container}>
          <div className={styles.containerHeader}>
@@ -21,6 +25,9 @@ const Header = () => {
                <img
                   src={logo}
                   alt="Logo loose"
+                  onClick={() => {
+                     navigate('/');
+                  }}
                />
             </div>
 
@@ -46,7 +53,12 @@ const Header = () => {
             <div className={styles.containerWrapperActions}>
                <div className={styles.containerWrapperActionsIcons}>
                   <Heart size={20} />
-                  <Handbag size={20} />
+                  <Handbag
+                     size={20}
+                     onClick={() => {
+                        navigate('/cart');
+                     }}
+                  />
                </div>
 
                <MobileMenu />
