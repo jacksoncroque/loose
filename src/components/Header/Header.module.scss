@@ -151,3 +151,37 @@
       }
    }
 }
+
+.cartIcon {
+   position: relative;
+   cursor: pointer;
+
+   & > svg {
+      transition: all ease-in-out 0.3s;
+      cursor: pointer;
+
+      &:hover {
+         transform: translateY(-10%);
+      }
+   }
+}
+
+.cartQuantity {
+   position: absolute;
+   top: -8px;
+   right: -8px;
+
+   width: 16px;
+   height: 16px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   border-radius: 50%;
+   background: #000;
+   color: #fff;
+
+   font-size: 9px;
+   font-weight: 600;
+}

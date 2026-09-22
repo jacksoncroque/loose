@@ -10,7 +10,7 @@ export const data = [
       productName: 'camiseta blv channel off white.',
       labelDescription: 'camiseta masculina',
       info: '2 cores',
-      price: 'R$80,00',
+      price: 80.00,
       labelButton: 'comprar',
    },
    {
@@ -20,7 +20,7 @@ export const data = [
       productName: 'camiseta good times preta.',
       labelDescription: 'camiseta masculina',
       info: '1 cor',
-      price: 'R$99         ,00',
+      price: 99.00,
       labelButton: 'comprar',
    },
    {
@@ -30,7 +30,7 @@ export const data = [
       productName: 'camiseta blv channel azul.',
       labelDescription: 'camiseta masculina',
       info: '2 cores',
-      price: 'R$80,00',
+      price: 80.00,
       labelButton: 'comprar',
    },
 ];
