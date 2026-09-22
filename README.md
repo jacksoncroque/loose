@@ -25,3 +25,29 @@ Por exemplo: em uma loja de calçados, o produto pode ser um Tênis masculino, m
 ### Conclusão
 
 Ter esses conceitos bem definidos é importante porque cada um deles cumpre uma função diferente dentro de um e-commerce. A árvore de categorias organiza os produtos e facilita a navegação do cliente, enquanto o produto representa de forma mais ampla aquilo que está sendo comercializado. Já o SKU permite identificar cada variação específica e controlar informações como tamanho, cor e estoque. Essa separação evita ambiguidades, facilita o gerenciamento dos produtos e do estoque e também permite que funcionalidades como busca, filtros, carrinho e pedidos trabalhem com informações mais precisas e consistentes.
+
+## Execução do projeto
+
+### Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/jacksoncroque/loose.git
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute:
+
+```bash
+npm run dev
+```
+
+O terminal deve mostrar a porta onde está rodando.
+
+:)
