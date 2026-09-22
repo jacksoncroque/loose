@@ -1,78 +1,27 @@
-# React + TypeScript + Vite
+# loose.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido como teste técnico de Front-End, utilizando React, TypeScript e Sass, a partir do protótipo fornecido.
 
-Currently, two official plugins are available:
+## Conceitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### O que é uma árvore de categorias?
 
-## React Compiler
+Uma árvore de categorias é uma estrutura hierárquica utilizada para organizar produtos dentro de diferentes níveis de classificação, do mais abrangente ao mais específico. Essa forma de organização contribui para que o cliente encontre um item com mais facilidade.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Por exemplo: imagine que um cliente esteja procurando um tênis masculino para corrida. Ele pode navegar por Calçados → Masculino → Esportivo → Corrida → Tênis, até encontrar o produto desejado.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+### O que é um produto?
 
-## Expanding the ESLint configuration
+Um produto representa de forma mais genérica o item que está sendo comercializado. Ele reúne informações que descrevem o que está sendo vendido, como nome, descrição, categoria e imagem.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Por exemplo: Tênis masculino.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### O que são SKUs?
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+SKU (Stock Keeping Unit) é um identificador utilizado para diferenciar e controlar uma variação específica de um produto em estoque. Essa variação pode ser definida por características como cor, tamanho ou modelo.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Por exemplo: em uma loja de calçados, o produto pode ser um Tênis masculino, mas o cliente precisa escolher uma combinação específica, como branco, tamanho 42. Essa combinação pode ser identificada por um SKU, como
 
-```
+### Conclusão
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+Ter esses conceitos bem definidos é importante porque cada um deles cumpre uma função diferente dentro de um e-commerce. A árvore de categorias organiza os produtos e facilita a navegação do cliente, enquanto o produto representa de forma mais ampla aquilo que está sendo comercializado. Já o SKU permite identificar cada variação específica e controlar informações como tamanho, cor e estoque. Essa separação evita ambiguidades, facilita o gerenciamento dos produtos e do estoque e também permite que funcionalidades como busca, filtros, carrinho e pedidos trabalhem com informações mais precisas e consistentes.
